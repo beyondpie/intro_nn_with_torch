@@ -11,7 +11,7 @@
      [[https://docs.conda.io/en/latest/miniconda.html][here]].
 
 *** Install pytorch
-   1. Using conda to create an isolated and independent computational
+   - Using conda to create an isolated and independent computational
       environment.
 #+begin_src bash
 	## After install conda, you should have the command `conda` directly recognized
@@ -19,13 +19,13 @@
 
 	## Create a conda env named "pytorch", you can use whatever name you want
 	## In this env, we install python with version 3.8.
-	conda create -n pytorch python=3.8
+	conda create -n vae_example python=3.8
 #+end_src
 
-   2. After create the environment, let's go into it and install pytorch there.
+   - After create the environment, let's go into it and install pytorch there.
 #+begin_src bash
 	## Enter the env we created
-	source activate vae_torch
+	conda activate vae_example
 	## Install pytorch: https://pytorch.org
 	## We use MacOS as an example, and we only intall the CPU version of pytorch,
 	## So no GPU and CUDA are needed.
@@ -33,6 +33,21 @@
 #+end_src
 
 That's it. Now we have pytorch installed in our computer. When you want to use
-this, you only need to enter this environment by =source activate vae_torch=.
-You can leave this environment by =source deactivate=. What you do in
+this, you only need to enter this environment by =conda activate vae_example=.
+You can leave this environment by =conda deactivate=. What you do in
 _vae_torch_ environment will not influence other environment.
+
+*** Install other python packages
+#+begin_src python
+	## Under the env we created before, install several other python packages.
+	## visualization
+	pip install matplotlib
+	## install jupyter
+  pip install notebook
+#+end_src
+
+** Let's start our project
+#+begin_src bash
+	## In your terminal, run
+  jupyter notebook
+#+end_src
