@@ -1,0 +1,38 @@
+* An implementation of VAE
+
+** Setup the environment
+
+*** Pre-request
+	 We use pytorch for the deep learning, which depends on python.
+
+	 -  We need [[https://docs.conda.io/projects/conda/en/latest/][conda]] or pip to install pytorch. Here we choose to use conda,
+     since it's really a great package, dependency and environment management
+     for different languages, such as R, Python and so on. You can install conda
+     [[https://docs.conda.io/en/latest/miniconda.html][here]].
+
+*** Install pytorch
+   1. Using conda to create an isolated and independent computational
+      environment.
+#+begin_src bash
+	## After install conda, you should have the command `conda` directly recognized
+	## in your terminal.
+
+	## Create a conda env named "pytorch", you can use whatever name you want
+	## In this env, we install python with version 3.8.
+	conda create -n pytorch python=3.8
+#+end_src
+
+   2. After create the environment, let's go into it and install pytorch there.
+#+begin_src bash
+	## Enter the env we created
+	source activate vae_torch
+	## Install pytorch: https://pytorch.org
+	## We use MacOS as an example, and we only intall the CPU version of pytorch,
+	## So no GPU and CUDA are needed.
+	conda install pytorch torchvision torchaudio -c pytorch
+#+end_src
+
+That's it. Now we have pytorch installed in our computer. When you want to use
+this, you only need to enter this environment by =source activate vae_torch=.
+You can leave this environment by =source deactivate=. What you do in
+_vae_torch_ environment will not influence other environment.
