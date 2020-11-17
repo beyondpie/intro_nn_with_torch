@@ -39,15 +39,15 @@ _vae_torch_ environment will not influence other environment.
 
 *** Install other python packages
 #+begin_src python
-	## Under the env we created before, install several other python packages.
-	## visualization
-	pip install matplotlib
-	## install jupyter
+  ## Under the env we created before, install several other python packages.
+  ## visualization
+  ip install matplotlib
+  ## install jupyter
   pip install notebook
 #+end_src
 
 ** Let's start our project
 #+begin_src bash
-	## In your terminal, run
+  ## In your terminal, run
   jupyter notebook
 #+end_src
