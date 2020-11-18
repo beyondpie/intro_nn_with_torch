@@ -41,7 +41,7 @@ _vae_torch_ environment will not influence other environment.
 #+begin_src python
   ## Under the env we created before, install several other python packages.
   ## visualization
-  ip install matplotlib
+  pip install matplotlib
   ## install jupyter
   pip install notebook
 #+end_src
