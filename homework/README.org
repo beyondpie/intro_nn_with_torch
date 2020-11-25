@@ -11,25 +11,24 @@
      [[https://docs.conda.io/en/latest/miniconda.html][here]].
 
 *** Install pytorch
-   - Using conda to create an isolated and independent computational
+   - Use conda to create an isolated and independent computational
       environment.
 #+begin_src bash
-	## After install conda, you should have the command `conda` directly recognized
-	## in your terminal.
-
-	## Create a conda env named "pytorch", you can use whatever name you want
-	## In this env, we install python with version 3.8.
-	conda create -n vae_example python=3.8
+  ## After install conda, you should have the command `conda` directly recognized
+  ## in your terminal.
+  ## Create a conda env named "vae_example", you can use whatever name you want
+  ## In this env, we install python with version 3.8.
+  conda create -n vae_example python=3.8
 #+end_src
 
    - After create the environment, let's go into it and install pytorch there.
 #+begin_src bash
-	## Enter the env we created
-	conda activate vae_example
-	## Install pytorch: https://pytorch.org
-	## We use MacOS as an example, and we only intall the CPU version of pytorch,
-	## So no GPU and CUDA are needed.
-	conda install pytorch torchvision torchaudio -c pytorch
+  ## Enter the env we created
+  conda activate vae_example
+  ## Install pytorch: https://pytorch.org
+  ## We use MacOS as an example, and we only intall the CPU version of pytorch,
+  ## So no GPU and CUDA are needed.
+  conda install pytorch torchvision torchaudio -c pytorch
 #+end_src
 
 That's it. Now we have pytorch installed in our computer. When you want to use
@@ -39,7 +38,8 @@ _vae_torch_ environment will not influence other environment.
 
 *** Install other python packages
 #+begin_src python
-  ## Under the env we created before, install several other python packages.
+  ## Under the env (named vae_example here) we create,
+  ## install several other python packages.
   ## visualization
   pip install matplotlib
   ## install jupyter
@@ -48,6 +48,8 @@ _vae_torch_ environment will not influence other environment.
 
 ** Let's start our project
 #+begin_src bash
-  ## In your terminal, run
-  jupyter notebook
+	## Before running jupyter notebook, make sure you are in the conda env setup early
+  ## conda activate vae_example
+	## In your terminal, run
+	jupyter notebook
 #+end_src
