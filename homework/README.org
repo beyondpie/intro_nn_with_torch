@@ -48,8 +48,8 @@ _vae_torch_ environment will not influence other environment.
 
 ** Let's start our project
 #+begin_src bash
-	## Before running jupyter notebook, make sure you are in the conda env setup early
+  ## Before running jupyter notebook, make sure you are in the conda env setup early
   ## conda activate vae_example
-	## In your terminal, run
-	jupyter notebook
+  ## In your terminal, run
+  jupyter notebook
 #+end_src
